@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "NotoSans";
+    src: url(Noto-Sans/NotoSans-Bold.ttf)
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "NotoSans";
+}
+
+@media (prefers-color-scheme:light){ 
+    body{
+        background-color: white;
+        color: black;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+@media (prefers-color-scheme:dark){ 
+    body{
+        background-color: black;
+        color: white;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+img{
+    aspect-ratio: 16/9;
+}
