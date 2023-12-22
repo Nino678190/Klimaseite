@@ -70,7 +70,6 @@ img{
     border-radius: 25px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-bottom: 20px;
 }
    
 .image-container img {
@@ -83,4 +82,5 @@ img{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
