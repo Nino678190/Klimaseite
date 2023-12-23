@@ -255,3 +255,34 @@ img {vertical-align: middle;}
     align-items: center;
     flex-direction: column;
 }
+
+.imgfleisch{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.fleischteil{
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+
+.leserinfo{
+    text-decoration: overline underline;
+    text-decoration-color: lightblue;
+    font-size: larger;
+}
+
+.fleischimage{
+    max-width: 100%;
+}
+
+li{
+   list-style: inside "- ";
+}
+
+.linkquelle{
+    text-decoration: underline;
+}
