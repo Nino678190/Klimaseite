@@ -42,6 +42,7 @@ img{
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    align-items: center;
 }
 
 .hover-text {
@@ -213,6 +214,44 @@ img {vertical-align: middle;}
 }
 
 .biobild{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bioinfo{
     max-width: 50%;
     height: auto;
+    font-size: 1.25em;
+}
+
+.fehlerbutton{
+    background: black;
+    color: white;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.fehlerbild{
+    max-width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fehlertext{
+    display: flex;
+    font-size: large;
+}
+
+.fehlerinhalt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
