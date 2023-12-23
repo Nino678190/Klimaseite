@@ -201,3 +201,18 @@ img {vertical-align: middle;}
   color: black;
 }
 
+.biotext{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.bioüber{
+    display: flex;
+    justify-content: center;
+}
+
+.biobild{
+    max-width: 50%;
+    height: auto;
+}
