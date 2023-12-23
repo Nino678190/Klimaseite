@@ -94,7 +94,7 @@ img{
 }
 
 .memory-card:hover{
-    rotate: 180;
+    animation: flip;
     transition: 2s;
 }
 
@@ -200,3 +200,4 @@ img {vertical-align: middle;}
   background-color: #f1f1f1;
   color: black;
 }
+
