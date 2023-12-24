@@ -202,27 +202,20 @@ img {vertical-align: middle;}
   color: black;
 }
 
-.biotext{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 10px;
-}
-
 .bioüber{
     display: flex;
     justify-content: center;
 }
 
 .biobild{
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    display: block;
 }
 
-.bioinfo{
-    max-width: 50%;
-    height: auto;
-    font-size: 1.25em;
+.biobilddiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fehlerbutton{
@@ -286,3 +279,83 @@ li{
 .linkquelle{
     text-decoration: underline;
 }
+
+.memory-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: auto;
+    max-width: 100%;
+}
+  
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    /* grid-gap: 5px; */
+}
+  
+.card {
+    /* width: 80px;
+    height: 80px; */
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3 ease;
+}
+  
+.flip .hidden {
+    display: block;
+}
+  
+.hidden {
+    display: none;
+}
+
+.neustartmemory{
+    height: 50px;
+    width: 250px;
+}
+
+.neustartknopf{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 7000px) and (min-width: 700px) {
+    .card{
+        width: 120px;
+        height: 120px;
+        font-size: 30px;
+    }
+
+    .cards{
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 699px) and (min-width: 400px) {
+    .card{
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+    }
+
+    .cards{
+        grid-gap: 5px;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .card{
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+} 
+    
