@@ -115,4 +115,3 @@ const cardsArray = [
   }
 
   createBoard();
-  
