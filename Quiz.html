@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="art.png">
+        <title>
+            Klimawebseite
+        </title>
+    </head>
+    <body>
+        <header>
+            <div class="headerinhalt">
+                <div><a href="index.html">Home</a></div> <div></div> <div><a href="index.html"><img src="logo.png" alt="Logo"></a></div> <div></div> <div><a href="spieleindex.html">Spiele</a></div> <div><a href="nachindex.html">Infos</a></div>
+            </div>
+            <hr>
+        </header>
+        <h1 id="frage"></h1>
+        <label><input type="radio" name="antwort" value="1"> Antwort 1</label>
+        <label><input type="radio" name="antwort" value="0"> Antwort 2</label>
+        <label><input type="radio" name="antwort" value="-1"> Antwort 3</label>
+        <button onclick="berechnePunkte()">Antwort überprüfen</button>
+        <p class="hidden">Punktzahl: <span id="punktzahl">0</span></p>
+        <script src="JS/quiz.js"></script>
+        <footer>
+            <div class="footerinhalt">
+                <div></div>
+            </div>
+        </footer>
+    </body>
+</html>
