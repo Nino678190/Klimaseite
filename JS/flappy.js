@@ -23,6 +23,8 @@ var bX = 10;
 var bY = 150;
 var gravity = 1.5;
 var score = 0;
+var lastMessage = "";
+let lastMessageTime = null;
 
 // audio files
 var fly = new Audio();
@@ -50,14 +52,13 @@ pipe[0] = {
 
 // draw images
 function draw() {
- ctx.drawImage(bg, 0, 0);
+  ctx.clearRect(0, cvs.height / 2 - 20, cvs.width, 40);
+  ctx.drawImage(bg, 0, 0);
 
- for (var i = 0; i < pipe.length; i++) {
+  for (var i = 0; i < pipe.length; i++) {
     constant = pipeNorth.height + gap;
-
     ctx.drawImage(pipeNorth, pipe[i].x, pipe[i].y);
     ctx.drawImage(pipeSouth, pipe[i].x, pipe[i].y + constant);
-
     pipe[i].x--;
 
     if (pipe[i].x == 125) {
@@ -67,7 +68,6 @@ function draw() {
       });
     }
 
-    // detect collision
     if (
       (bX + bird.width >= pipe[i].x &&
         bX <= pipe[i].x + pipeNorth.width &&
@@ -75,12 +75,29 @@ function draw() {
           bY + bird.height >= pipe[i].y + constant)) ||
       bY + bird.height >= cvs.height - fg.height
     ) {
-      location.reload(); // reload the page
+      location.reload(); 
     }
 
     if (pipe[i].x == 5) {
       score++;
       scor.play();
+    }
+
+    let messages = ['Fliege weniger!', 'Iss weniger Fleisch!', 'Nutze mehr den ÖPNV!', 'Denk ans Klima!', 'Klimawandel!'];
+
+    if (score % 1 == 0 && score != 0) {
+      if (lastMessage !== "" && lastMessageTime !== null && new Date().getTime() - lastMessageTime < 3000) {
+        ctx.fillStyle = "#fc583b";
+        ctx.font = "bold 20px Verdana";
+        ctx.fillText(lastMessage, (cvs.width - ctx.measureText(lastMessage).width) / 2, cvs.height / 2);
+      } else {
+        let randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        ctx.fillStyle = "#fc583b";
+        ctx.font = " bold 20px Verdana";
+        ctx.fillText(randomMessage, (cvs.width - ctx.measureText(randomMessage).width) / 2, cvs.height / 2);
+        lastMessage = randomMessage;
+        lastMessageTime = new Date().getTime();
+      }
     }
  }
 
