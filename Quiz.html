@@ -16,12 +16,14 @@
             </div>
             <hr>
         </header>
-        <h1 id="frage"></h1>
-        <label><input type="radio" name="antwort" value="1"> Antwort 1</label>
-        <label><input type="radio" name="antwort" value="0"> Antwort 2</label>
-        <label><input type="radio" name="antwort" value="-1"> Antwort 3</label>
-        <button onclick="berechnePunkte()">Antwort überprüfen</button>
-        <p class="hidden">Punktzahl: <span id="punktzahl">0</span></p>
+        <div class="quiz"> 
+            <h3 id="frage" class="frage"></h3>
+            <label><input type="checkbox" name="antwort" value="1" class="quizeingabe"> Antwort 1</label>
+            <label><input type="checkbox" name="antwort" value="0" class="quizeingabe"> Antwort 2</label>
+            <label><input type="checkbox" name="antwort" value="-1" class="quizeingabe"> Antwort 3</label>
+            <button onclick="berechnePunkte()" class="quizweiter">Weiter -></button>
+            <p class="hidden">Punktzahl: <span id="punktzahl">0</span></p>
+        </div>
         <script src="JS/quiz.js"></script>
         <footer>
             <div class="footerinhalt">
