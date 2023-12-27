@@ -219,7 +219,9 @@ function updatePunktzahl(punkte) {
 }
 
 function endefragen(gesamtPunktzahl){
-  if (gesamtPunktzahl >= 17){
+  if (gesamtPunktzahl == 20){
+    alert("Du kennst dich echt gut aus. 20/20 Punkte. Perfekt")
+  }else if (gesamtPunktzahl >= 17 && gesamtPunktzahl <=19){
       alert("Super, du bist ein richtiger Profi beim Klimaschutz")
   } else if (gesamtPunktzahl >= 10 && gesamtPunktzahl <= 16){
       alert("Das ist ein echt gutes Wissen, du kannst es aber noch ein wenig verbessern")
