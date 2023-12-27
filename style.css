@@ -67,6 +67,10 @@ img{
     border-radius: 25px;
 }
 
+.spieltext{
+    color: black;
+}
+
 .image-container {
     position: relative;
     display: inline-block;
