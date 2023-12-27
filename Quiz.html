@@ -9,7 +9,7 @@
             Klimawebseite
         </title>
     </head>
-    <body>
+    <body onload="alert('Du kannst pro Frage entweder 1, 0 oder -1 Punkt erhalten')">
         <header>
             <div class="headerinhalt">
                 <div><a href="index.html">Home</a></div> <div></div> <div><a href="index.html"><img src="logo.png" alt="Logo"></a></div> <div></div> <div><a href="spieleindex.html">Spiele</a></div> <div><a href="nachindex.html">Infos</a></div>
@@ -17,12 +17,10 @@
             <hr>
         </header>
         <div class="quiz"> 
-            <h3 id="frage" class="frage"></h3>
-            <label><input type="checkbox" name="antwort" value="1" class="quizeingabe"> Antwort 1</label>
-            <label><input type="checkbox" name="antwort" value="0" class="quizeingabe"> Antwort 2</label>
-            <label><input type="checkbox" name="antwort" value="-1" class="quizeingabe"> Antwort 3</label>
-            <button onclick="berechnePunkte()" class="quizweiter">Weiter -></button>
-            <p class="hidden">Punktzahl: <span id="punktzahl">0</span></p>
+            <div class="quizelement"><h3 id="frage"></h3></div>
+            <div id="antwortenContainer" class="quizantwort"></div>
+            <div><button onclick="berechnePunkte()" class="quizweiter">Antwort überprüfen</button></div>
+            <div><p class="hidden">Punktzahl: <span id="punktzahl">0</span></p></div>
         </div>
         <script src="JS/quiz.js"></script>
         <footer>
