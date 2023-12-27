@@ -354,6 +354,10 @@ li{
         grid-gap: 20px;
         width: 30%;
     }
+
+    .quizweiter{
+        max-width: 10% !important;
+    }
 }
 
 @media screen and (max-width: 1599px) and (min-width: 1400px) {
@@ -370,6 +374,10 @@ li{
     .cards{
         grid-gap: 20px;
         width: 35%;
+    }
+
+    .quizweiter{
+        max-width: 10% !important;
     }
 }
 
@@ -388,6 +396,10 @@ li{
         grid-gap: 20px;
         width: 40%;
     }
+
+    .quizweiter{
+        max-width: 15% !important;
+    }
 }
 
 @media screen and (max-width: 1299px) and (min-width: 1200px) {
@@ -404,6 +416,10 @@ li{
     .cards{
         grid-gap: 20px;
         width: 45%;
+    }
+
+    .quizweiter{
+        max-width: 15% !important;
     }
 }
 
@@ -422,6 +438,10 @@ li{
     .cards{
         grid-gap: 20px;
         width: 60%;
+    }
+
+    .quizweiter{
+        max-width: 15% !important;
     }
 }
 
@@ -495,6 +515,10 @@ li{
         height: 40px;
         font-size: 20px;
     }
+
+    .quizweiter{
+        max-width: 45% !important;
+    }
 } 
 
 .random{
@@ -513,20 +537,20 @@ li{
 }
 
 .quizeingabe{
-    background: greenyellow;
-    border-radius: 10px;
     accent-color: greenyellow;
 }
 
 .frage{
-    margin: 10px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
 .quizweiter{
+    width: auto;
     max-width: 25%;
+    height: 30px;
     margin-top: 10px;
     display: flex;
     justify-content: center;
