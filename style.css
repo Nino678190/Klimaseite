@@ -308,7 +308,7 @@ li{
     height: 80px;
     background-color: #ccc;
     display: flex;
-    justify-content: center space-around;
+    justify-content: center;
     align-items: center;
     font-size: 24px;
     cursor: pointer;
@@ -323,6 +323,8 @@ li{
   
 .hidden {
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .neustartmemory{
