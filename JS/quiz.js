@@ -216,9 +216,9 @@ function endefragen(gesamtPunktzahl){
         alert("Super, du bist ein richtiger Profi beim Klimaschutz")  
     } else if (gesamtPunktzahl >= 10 && gesamtPunktzahl <= 16){
         alert("Das ist ein echt gutes Wissen, du kannst es aber noch ein wenig verbessern")  
-    } else if (gesamtPunktzahl >=5 && gesamtPunktzahl >= 9){
+    } else if (gesamtPunktzahl >=5 && gesamtPunktzahl <= 9){
         alert("Das ist ein guter Anfang in die richtige Richtung")  
-    } else if (gesamtPunktzahl >=0 && gesamtPunktzahl >= 4){
+    } else if (gesamtPunktzahl >=-20 && gesamtPunktzahl <= 4){
         alert("Schau dir vielleicht mal unsere Informationen an um etwas über Klimaschutz zu lernen")  }
 }
 

@@ -34,7 +34,7 @@ fly.src = "Flappy/sounds/fly.mp3";
 scor.src = "Flappy/sounds/score.mp3";
 
 // on key down
-document.addEventListener("mousedown", moveUp);
+document.addEventListener("keydown", moveUp);
 
 function moveUp() {
  bY -= 25;

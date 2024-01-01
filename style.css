@@ -294,6 +294,10 @@ li{
     text-decoration: underline;
 }
 
+.quellen{
+    margin: 10px;
+}
+
 .memory-game {
     display: flex;
     justify-content: center;
@@ -319,11 +323,11 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
     cursor: pointer;
     transition: transform 0.3 ease;
     margin: 5px;
     aspect-ratio: 1/1;
+    text-overflow: unset;
 }
   
 .flip .hidden {
@@ -334,6 +338,7 @@ li{
     display: none;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 .neustartmemory{
@@ -356,7 +361,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .cards{
@@ -377,7 +382,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .cards{
@@ -398,7 +403,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .cards{
@@ -419,7 +424,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .cards{
@@ -441,7 +446,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .cards{
@@ -462,7 +467,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .cards{
@@ -475,7 +480,7 @@ li{
     .card{
         width: 80px;
         height: 80px;
-        font-size: 24px;
+        font-size: 14px;
     }
 
     .cards{
@@ -488,7 +493,7 @@ li{
     .card{
         width: 80px;
         height: 80px;
-        font-size: 24px;
+        font-size: 14px;
     }
 
     .cards{
@@ -501,7 +506,7 @@ li{
     .card{
         width: 70px;
         height: 70px;
-        font-size: 24px;
+        font-size: 14px;
     }
 
     .cards{
@@ -514,7 +519,7 @@ li{
     .card{
         width: 60px;
         height: 60px;
-        font-size: 20px;
+        font-size: 10px;
     }
 } 
 
@@ -522,7 +527,7 @@ li{
     .card{
         width: 40px;
         height: 40px;
-        font-size: 20px;
+        font-size: 10px;
     }
 
     .quizweiter{
