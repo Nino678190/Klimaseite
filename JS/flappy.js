@@ -34,12 +34,16 @@ fly.src = "Flappy/sounds/fly.mp3";
 scor.src = "Flappy/sounds/score.mp3";
 
 // on key down
+document.addEventListener("mousedown", moveUp);
 document.addEventListener("keydown", moveUp);
 
 function moveUp() {
- bY -= 40;
+  bY -= 40;
 
- fly.play();
+  // Only play the fly sound if the user has interacted with the page
+  if (document.activeElement === document.body) {
+    fly.play();
+  }
 }
 
 // pipe coordinates
@@ -80,9 +84,12 @@ function draw() {
 
     if (pipe[i].x == 5) {
       score++;
-      scor.play();
+    
+      // Only play the scor sound if the user has interacted with the page
+      if (document.activeElement === document.body) {
+        scor.play();
+      }
     }
-
     let messages = ['Fliege weniger!', 'Iss weniger Fleisch!', 'Nutze mehr den ÖPNV!', 'Denk ans Klima!', 'Klimawandel!'];
 
     if (score % 1 == 0 && score != 0) {

@@ -323,11 +323,13 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     cursor: pointer;
     transition: transform 0.3 ease;
     margin: 5px;
     aspect-ratio: 1/1;
     text-overflow: unset;
+    text-wrap: wrap;
 }
   
 .flip .hidden {
@@ -361,7 +363,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .cards{
@@ -382,7 +384,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .cards{
@@ -403,7 +405,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .cards{
@@ -424,7 +426,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .cards{
@@ -446,7 +448,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .cards{
@@ -467,7 +469,7 @@ li{
     .card{
         width: 100px;
         height: 100px;
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .cards{
@@ -480,7 +482,7 @@ li{
     .card{
         width: 80px;
         height: 80px;
-        font-size: 14px;
+        font-size: 8px;
     }
 
     .cards{
@@ -493,7 +495,7 @@ li{
     .card{
         width: 80px;
         height: 80px;
-        font-size: 14px;
+        font-size: 8px;
     }
 
     .cards{
@@ -506,7 +508,7 @@ li{
     .card{
         width: 70px;
         height: 70px;
-        font-size: 14px;
+        font-size: 8px;
     }
 
     .cards{
@@ -519,7 +521,7 @@ li{
     .card{
         width: 60px;
         height: 60px;
-        font-size: 10px;
+        font-size: 5px;
     }
 } 
 
@@ -527,7 +529,7 @@ li{
     .card{
         width: 40px;
         height: 40px;
-        font-size: 10px;
+        font-size: 5px;
     }
 
     .quizweiter{

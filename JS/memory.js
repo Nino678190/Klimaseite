@@ -1,6 +1,6 @@
 const cardsArray = [
-  '🍎', '🍊', '🍋', '🍉', '🍇', '🍒', '🥝', '🍍', '🥥', '🍌',
-  '🌟', '💧', '🔵', '📘', '🌐', '🦋', '🧩', '🧿', '🌀'
+    "CO2-Emissionen", "Bio-Lebensmittel", "Klimawandel", "Fleischkonsum", "Vegetation", "Forstwirtschaftliches Prinzip",
+    "ökologischen Fußabdruck", "regionale Lebensmittel", "erneuerbare Energien", "Umwelt"
 ];
 
 const gameBoard = document.getElementById('memory-game');
@@ -11,10 +11,8 @@ let pairsFound = 0;
 const kofetti = document.getElementById('konfetti')
 
 function createBoard() {
-  const selectedCards = selectRandomCards(cardsArray, 8); 
+  const selectedCards = selectRandomCards(cardsArray, 10); 
   const cardArrayCopy = duplicateAndShuffle(selectedCards);
-  cardArrayCopy.push('Ethik', 'Blau');
-  cardArrayCopy.push('Deutsch', 'rot')
   cardArrayCopy.sort(() => 0.5 - Math.random());
 
   for (let i = 0; i < cardArrayCopy.length; i++) {
@@ -65,16 +63,45 @@ function flipCard() {
 
 function checkMatch() {
   let isMatch = firstCard.dataset.value === secondCard.dataset.value;
-  if ((firstCard.dataset.value === 'Ethik' && secondCard.dataset.value === 'Blau') || 
-      (firstCard.dataset.value === 'Blau' && secondCard.dataset.value === 'Ethik')  
-      ) { 
+  if (firstCard.dataset.value === 'CO2-Emissionen' && secondCard.dataset.value === 'CO2-Emissionen'){ 
     isMatch = true;
-    alert('TEst')
+    alert('CO2-Emissionen bezeichnen den Ausstoß von Kohlenstoffdioxid, einem stark wirksamen Treibhausgas')
   }
-  if ((firstCard.dataset.value === 'Deutsch' && secondCard.dataset.value === 'rot') ||
-      (firstCard.dataset.value === 'rot' && secondCard.dataset.value === 'Deutsch')){
+  if (firstCard.dataset.value === 'Bio-Lebensmittel' && secondCard.dataset.value === 'Bio-Lebensmittel'){
     isMatch = true;
-    alert('TEst')
+    alert('Als Bio-Lebensmittel werden Lebensmittel aus der ökologischen Landwirtschaft bezeichnet. Der Begriff ist in der EU gesetzlich definiert')
+  }
+  if (firstCard.dataset.value === 'Klimawandel' && secondCard.dataset.value === 'Klimawandel'){
+    isMatch = true;
+    alert('ein deutlicher, dramatischer, globaler, unaufhaltsamer, weltweiter Klimawandel')
+  }
+  if (firstCard.dataset.value === 'Fleischkonsum' && secondCard.dataset.value === 'Fleischkonsum'){
+    isMatch = true;
+    alert('Fleischkonsum ist der Verzehr von Fleisch als menschliches Nahrungsmittel, direkt oder in Form von Fleischprodukten oder im weiteren Sinne der gesamte Verbrauch von Fleisch durch den Menschen.')
+  }
+  if (firstCard.dataset.value === 'Vegetation' && secondCard.dataset.value === 'Vegetation'){
+    isMatch = true;
+    alert('ein bestimmtes Gebiet bedeckende Pflanzen; Pflanzendecke, Bestand an Pflanzen')
+  }
+  if (firstCard.dataset.value === 'Forstwirtschaftliches Prinzip' && secondCard.dataset.value === 'Forstwirtschaftliches Prinzip'){
+    isMatch = true;
+    alert('Nachhaltigkeit-forstwirtschaftliches Prinzip, nach dem nicht mehr Holz gefällt werden darf, als jeweils nachwachsen kann')
+  }
+  if (firstCard.dataset.value === 'ökologischen Fußabdruck' && secondCard.dataset.value === 'ökologischen Fußabdruck'){
+    isMatch = true;
+    alert('Mit dem „ökologischen Fußabdruck“ wird gemessen, wie viel Fläche auf der Erde gebraucht wird, um all das herzustellen und zu entsorgen, was ein Mensch für seinen persönlichen Lebensstil benötigt. Die Schätze unserer Erde sind begrenzt. Manche wachsen wieder nach, oft allerdings erst in vielen Jahren')
+  }
+  if (firstCard.dataset.value === 'regionale Lebensmittel' && secondCard.dataset.value === 'regionale Lebensmittel'){
+    isMatch = true;
+    alert('regionale Lebensmittel sind Lebensmittel, die in derselben Region erzeugt und verbraucht werden. Dabei ist der Begriff „Region“ als solcher weder geschützt noch gibt es eine allgemein verbindliche Definition oder Norm.')
+  }
+  if (firstCard.dataset.value === 'erneuerbare Energien' && secondCard.dataset.value === 'erneuerbare Energien'){
+    isMatch = true;
+    alert('Als erneuerbare Energien oder regenerative Energien, auch alternative Energien, werden Energiequellen bezeichnet, die im menschlichen Zeithorizont für nachhaltige Energieversorgung praktisch unerschöpflich zur Verfügung stehen oder sich verhältnismäßig schnell erneuern')
+  }
+  if (firstCard.dataset.value === 'Umwelt' && secondCard.dataset.value === 'Umwelt'){
+    isMatch = true;
+    alert('Alles, was einen Menschen umgibt, auf ihn einwirkt und seine Lebensbedingungen beeinflusst, insbesondere die Natur')
   }
   if (isMatch) {
     disableCards();
