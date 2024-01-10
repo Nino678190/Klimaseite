@@ -26,6 +26,13 @@ var score = 0;
 var lastMessage = "";
 let lastMessageTime = null;
 
+// audio files
+var fly = new Audio();
+var scor = new Audio();
+
+fly.src = "Flappy/sounds/fly.mp3";
+scor.src = "Flappy/sounds/score.mp3";
+
 // on key down
 document.addEventListener("keydown", moveUp);
 
@@ -76,7 +83,7 @@ function draw() {
       scor.play();
     }
 
-    let messages = ['Fliege weniger!', 'Iss weniger Fleisch!', 'Nutze mehr den ÖPNV!', 'Denk ans Klima!', 'Klimawandel!', 'Spende '];
+    let messages = ['Fliege weniger!', 'Iss weniger Fleisch!', 'Nutze mehr den ÖPNV!', 'Denk ans Klima!', 'Klimawandel!'];
 
     if (score % 1 == 0 && score != 0) {
       if (lastMessage !== "" && lastMessageTime !== null && new Date().getTime() - lastMessageTime < 3000) {
