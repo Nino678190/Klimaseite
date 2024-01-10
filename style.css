@@ -615,3 +615,20 @@ li{
 footer{
     height: 50px;
 }
+
+label{
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+.konfetti{
+    opacity: 0;
+}
+
+.confetti{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    user-select: none;
+ }
