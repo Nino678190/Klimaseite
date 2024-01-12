@@ -142,7 +142,7 @@ function resetBoard() {
 function restartGame() {
   const gameBoard = document.getElementById('memory-game');
   gameBoard.innerHTML = '';
-  konfetti.inn
+  konfetti.innerHTML = '';
   createBoard();
 }
 
