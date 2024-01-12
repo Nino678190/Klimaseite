@@ -37,6 +37,13 @@ body {
     header{
         background-color: rgba(12, 89, 28);
     }
+    .flip .hidden {
+        display: block;
+        color: white;
+    }
+    .card.flip{
+        background-color: black;
+    }
 }
 
 img{
@@ -488,7 +495,7 @@ li{
     .card{
         width: 80px;
         height: 80px;
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .cards{
@@ -501,7 +508,7 @@ li{
     .card{
         width: 80px;
         height: 80px;
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .cards{
@@ -514,7 +521,7 @@ li{
     .card{
         width: 70px;
         height: 70px;
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .cards{
@@ -527,7 +534,7 @@ li{
     .card{
         width: 60px;
         height: 60px;
-        font-size: 5px;
+        font-size: 10px;
     }
 } 
 
@@ -535,7 +542,7 @@ li{
     .card{
         width: 40px;
         height: 40px;
-        font-size: 5px;
+        font-size: 10px;
     }
 
     .quizweiter{
