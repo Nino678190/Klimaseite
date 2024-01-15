@@ -25,6 +25,7 @@ var gravity = 1.5;
 var score = 0;
 var lastMessage = "";
 let lastMessageTime = null;
+var dead = false;
 
 // audio files
 var fly = new Audio();
@@ -39,11 +40,7 @@ document.addEventListener("keydown", moveUp);
 
 function moveUp() {
   bY -= 40;
-
-  // Only play the fly sound if the user has interacted with the page
-  if (document.activeElement === document.body) {
-    fly.play();
-  }
+  fly.play();
 }
 
 // pipe coordinates
@@ -56,6 +53,9 @@ pipe[0] = {
 
 // draw images
 function draw() {
+  if (dead){
+    return
+  }
   ctx.clearRect(0, cvs.height / 2 - 20, cvs.width, 40);
   ctx.drawImage(bg, 0, 0);
 
@@ -79,17 +79,17 @@ function draw() {
           bY + bird.height >= pipe[i].y + constant)) ||
       bY + bird.height >= cvs.height - fg.height
     ) {
+      console.log("Ausgelößt")
       location.reload(); 
+      dead = true;
+      break
     }
 
     if (pipe[i].x == 5) {
       score++;
-    
-      // Only play the scor sound if the user has interacted with the page
-      if (document.activeElement === document.body) {
-        scor.play();
-      }
+      scor.play();
     }
+    
     let messages = ['Fliege weniger!', 'Iss weniger Fleisch!', 'Nutze mehr den ÖPNV!', 'Denk ans Klima!', 'Klimawandel!'];
 
     if (score % 1 == 0 && score != 0) {
@@ -118,4 +118,4 @@ function draw() {
  requestAnimationFrame(draw);
 }
 
-draw();
+window.onload(draw());
